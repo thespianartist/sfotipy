@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Sfotipy</string>
+    <string name="welcome_text">La musica que te gusta, donde sea</string>
+    <string name="welcome_text_footer">Se parte del proyecto en mejorando.la/sfotipy</string>
+    <string name="register">Registrate</string>
+    <string name="login">Ingresa</string>
+
+</resources>
