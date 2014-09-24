@@ -1,5 +1,6 @@
 package la.mejorando.sfotipy;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Outline;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class WelcometoSfotipy extends Activity {
         outline.setOval(0, 0, size, size);
         ImageButton imageButton = (ImageButton) findViewById(R.id.fab_1);
         imageButton.setOutline(outline);
+
+
 
     }
 

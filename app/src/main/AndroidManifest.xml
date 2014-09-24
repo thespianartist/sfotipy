@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="la.mejorando.sfotipy.MusicMain"
+            android:label="@string/title_activity_music_main" >
+        </activity>
     </application>
 
 </manifest>
