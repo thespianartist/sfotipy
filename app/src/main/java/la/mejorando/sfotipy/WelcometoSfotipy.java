@@ -2,10 +2,12 @@ package la.mejorando.sfotipy;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Outline;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 
 
@@ -22,10 +24,13 @@ public class WelcometoSfotipy extends Activity {
         ImageButton imageButton = (ImageButton) findViewById(R.id.fab_1);
         imageButton.setOutline(outline);
 
-
-
     }
 
+    public void onClick(View v){
+
+        Intent i = new Intent(this,MusicMain.class);
+        startActivity(i);
+    }
 
 
 }
