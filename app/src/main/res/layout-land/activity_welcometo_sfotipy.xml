@@ -47,6 +47,7 @@
         android:layout_height="@dimen/fab_size"
         android:background="@drawable/ripple"
         android:elevation="4dp"
+        android:onClick="onClick"
         android:src="@drawable/login"
         android:layout_marginBottom="15dp"
         android:layout_below="@+id/welcome_text_footer"

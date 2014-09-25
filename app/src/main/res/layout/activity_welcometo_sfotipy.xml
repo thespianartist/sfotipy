@@ -46,6 +46,7 @@
         android:id="@+id/fab_1"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
+        android:onClick="onClick"
         android:background="@drawable/ripple"
         android:elevation="4dp"
         android:src="@drawable/login"

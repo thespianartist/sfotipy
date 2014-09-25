@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sfotipy.iml" filepath="$PROJECT_DIR$/sfotipy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sfotipy2.iml" filepath="$PROJECT_DIR$/sfotipy2.iml" />
     </modules>
   </component>
 </project>
