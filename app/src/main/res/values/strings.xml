@@ -5,8 +5,7 @@
     <string name="app_name">Sfotipy</string>
     <string name="welcome_text">La musica que te gusta, donde sea</string>
     <string name="welcome_text_footer">Se parte del proyecto en mejorando.la/sfotipy</string>
-    <string name="register">Registrate</string>
-    <string name="login">Ingresa</string>
-    <string name="title_activity_music_main">MusicMain</string>
+    <string name="title_activity_music_main">Music</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,12 +1,9 @@
 package la.mejorando.sfotipy;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Outline;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -28,7 +25,7 @@ public class WelcometoSfotipy extends Activity {
 
     public void onClick(View v){
 
-        Intent i = new Intent(this,MusicMain.class);
+        Intent i = new Intent(this,Music.class);
         startActivity(i);
     }
 

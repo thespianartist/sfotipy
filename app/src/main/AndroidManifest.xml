@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="la.mejorando.sfotipy.MusicMain"
+            android:name=".Music"
             android:label="@string/title_activity_music_main" >
         </activity>
     </application>
