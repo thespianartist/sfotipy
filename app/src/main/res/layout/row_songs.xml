@@ -1,0 +1,42 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avatar_song"
+        android:src="@drawable/header_bg"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/name_song"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/avatar_song" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/artist"
+        android:layout_toEndOf="@+id/avatar_amigo"
+        android:layout_below="@+id/name_song"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:numStars="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_toEndOf="@+id/avatar_song"
+        android:layout_alignBottom="@+id/avatar_song" />
+
+
+</RelativeLayout>

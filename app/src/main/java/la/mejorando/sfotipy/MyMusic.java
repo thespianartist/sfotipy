@@ -11,6 +11,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
+import com.parse.Parse;
+import com.parse.PushService;
+
 import la.mejorando.sfotipy.fragments.AmigosFragment;
 import la.mejorando.sfotipy.fragments.DestacadosFragment;
 import la.mejorando.sfotipy.fragments.ProfileFragment;
@@ -31,6 +34,8 @@ public class MyMusic extends Activity implements ActionBar.TabListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_music);
+
+
 
         setTabs();
 

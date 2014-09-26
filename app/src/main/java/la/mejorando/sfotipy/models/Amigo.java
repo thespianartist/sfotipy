@@ -9,6 +9,7 @@ public class Amigo {
     private String twitter;
     private String ultimaCancion;
 
+
     public String getNombre() {
         return nombre_amigo;
     }

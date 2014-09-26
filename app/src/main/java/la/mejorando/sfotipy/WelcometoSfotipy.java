@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.parse.Parse;
+import com.parse.PushService;
+
 
 public class WelcometoSfotipy extends Activity {
 
@@ -18,12 +21,18 @@ public class WelcometoSfotipy extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcometo_sfotipy);
 
+
+        Parse.initialize(this, "Z6vhQOXroFxXxQreqI2nv71vImfybjpLZjbYIKAj", "0jEcoh7uKUyQbCFpoli5qTkkiA1oqt58galYUNgl");
+        PushService.setDefaultPushCallback(this, WelcometoSfotipy.class);
+
         int size = getResources().getDimensionPixelSize(R.dimen.fab_size);
 
         Outline outline = new Outline();
         outline.setOval(0, 0, size, size);
         ImageButton imageButton = (ImageButton) findViewById(R.id.fab_1);
         imageButton.setOutline(outline);
+
+
 
     }
 
