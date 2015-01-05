@@ -35,9 +35,10 @@ import la.mejorando.sfotipy.models.Song;
  *
  */
 public class DestacadosFragment extends Fragment {
+    private ArrayList<Song> dataset;
+    private View activityRoot;
+    private RecyclerView recyclerView;
 
-
-    ArrayList<Song> dataset;
 
     public DestacadosFragment() {
         // Required empty public constructor
@@ -47,7 +48,13 @@ public class DestacadosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_destacados, container, false);
+        
+        // Inflate the layout for this fragment
+        activityRoot = inflater.inflate(R.layout.fragment_destacados, container, false);
+        recyclerView = (RecyclerView) activityRoot.findViewById( R.id.my_recycler_view_song);
+        recyclerView.setLayoutManager(  new LinearLayoutManager( getActivity() ) );
+
+        return activityRoot;
     }
 
 
@@ -68,11 +75,14 @@ public class DestacadosFragment extends Fragment {
             public void onResponse(JSONArray response) {
                 Log.e("mirespuesta",response.toString());
                 dataset = new ArrayList<Song>();
-                dataset= parser(response);
-
+                dataset = parser(response);
+                recyclerView.setItemAnimator(new DefaultItemAnimator());
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setAdapter(new SongsAdapter(dataset, R.layout.row_songs));
+                
                 progressDialog.cancel();
-
             }
+            
         }, new Response.ErrorListener() {
 
 
@@ -83,31 +93,7 @@ public class DestacadosFragment extends Fragment {
             }
         });
 
-
-
         queue.add(req);
-
-
-        ArrayList<Song> songs = new ArrayList<Song>();
-        Song song  = new Song();
-        song.setStars(3);
-        song.setSongName("GerLucky");
-        song.setSongArtist("DaftPunk");
-        songs.add(song);
-
-        Song song2  = new Song();
-        song2.setStars(3);
-        song2.setSongName("GerLucky");
-        song2.setSongArtist("DaftPunk");
-        songs.add(song2);
-
-
-        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view_song);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new SongsAdapter(songs, R.layout.row_songs));
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-
     }
 
 
